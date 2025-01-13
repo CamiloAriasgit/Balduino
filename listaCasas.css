@@ -1,0 +1,41 @@
+main {
+    margin-top: 180px;
+}
+
+.propiedadInformacion {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.infoGeneral,
+.caracteristicasPropiedad,
+.infoFinanciera,
+.fotosYVideos,
+.infoDeContacto {
+    margin-bottom: 20px;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
