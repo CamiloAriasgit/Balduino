@@ -1,24 +1,46 @@
+main {
+    margin-top: 135px;
+}
+
 body {
     background-color: black;
     font-family: 'Open Sans', sans-serif;
     margin: 0%;
 }
 
-h1{
+h1 {
     color: white;
     font-weight: normal;
 }
 
-.titulo{
+.titulo {
     padding-left: 20px;
 }
 
-a{
+.tituloBoton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloBoton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #003986;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 5px;
+}
+
+a {
     color: white;
     text-decoration: none;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -28,11 +50,11 @@ header{
     width: 100%;
 }
 
-.navegador{
+.navegador {
     border-bottom: 1px solid #1c1c1c;
 }
 
-.navegadorLista{
+.navegadorLista {
     list-style: none;
     display: flex;
     justify-content: space-evenly;

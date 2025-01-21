@@ -10,6 +10,10 @@ main {
     background-color: #121212;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .contenedor{
@@ -27,6 +31,12 @@ main {
 
 .fotosYVideos img{
     border-radius: 5px;
+}
+
+.caracteristicasPropiedad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contactoDirecto{

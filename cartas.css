@@ -30,7 +30,7 @@ main {
 
 @media (max-width: 768px) {
   .carta {
-    flex-basis: calc(50% - 20px);
+    flex-basis: 100%;
   }
 }
 
@@ -60,7 +60,8 @@ main {
 
 .cartaBotonEspace {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  gap: 10px;
   width: 100%;
 }
 
