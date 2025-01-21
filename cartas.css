@@ -14,7 +14,7 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   background-color: #121212;
-  height: 250px;
+  height: 400px;
   border-radius: 5px;
   padding: 10px;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ main {
   margin: 0px;
   color: #cccc;
   font-weight: normal;
-  font-size: small;
+  font-size: medium;
 }
 
 .cartaBotonEspace {
