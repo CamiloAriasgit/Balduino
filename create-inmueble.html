@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Inmueble Industrial</title>
+    <!-- Incluye Tailwind CSS desde el CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800 text-gray-100">
+
+    <nav class="bg-gray-900 shadow-lg">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <span class="text-white text-xl font-bold">Inmuebles Industriales</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Enlace activo a la página de listado -->
+                            <a href="index.html" class="nav-link active" aria-current="page">Ver Inmuebles</a>
+                            <!-- Enlace a la página de creación -->
+                            <a href="create-inmueble.html" class="nav-link">Crear Nuevo Inmueble</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md">
+        <h2 class="text-3xl font-bold text-center mb-6 text-gray-200">Registrar Nuevo Inmueble</h2>
+
+        <form id="inmuebleForm" class="space-y-4">
+            <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-300">Nombre del Inmueble:</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-100 sm:text-sm">
+            </div>
+
+            <div>
+                <label for="descripcion" class="block text-sm font-medium text-gray-300">Descripción/Estado:</label>
+                <input type="text" id="descripcion" name="descripcion" required
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-100 sm:text-sm">
+            </div>
+
+            <div>
+                <label for="metrosCuadrados" class="block text-sm font-medium text-gray-300">Metros Cuadrados
+                    (m²):</label>
+                <input type="text" id="metrosCuadrados" name="metrosCuadrados" required
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-100 sm:text-sm">
+            </div>
+
+            <div>
+                <label for="imagenUrl" class="block text-sm font-medium text-gray-300">URL de la Imagen:</label>
+                <input type="url" id="imagenUrl" name="imagenUrl"
+                    class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-gray-100 sm:text-sm">
+            </div>
+
+            <button type="submit"
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out">
+                Crear Inmueble
+            </button>
+        </form>
+
+        <div id="message" class="mt-4 text-center text-sm font-medium"></div>
+    </div>
+
+    <!-- Enlaza el archivo JavaScript para manejar la lógica del formulario -->
+    <script src="create-inmueble.js"></script>
+
+</body>
+
+</html>

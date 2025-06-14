@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balduino</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="menu.css">
+    <title>Naves Industriales y Megainmuebles</title>
+    <!-- Incluye Tailwind CSS desde el CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos básicos para la barra de navegación */
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white;
+        }
+        .nav-link.active {
+            @apply bg-gray-700 text-white;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div class="tituloBoton">
-            <h1 class="titulo">Balduino</h1>
-            <a href="https://wa.me/+573003607632?text=Hola,+Quiero+añadir+una+propiedad+al+catalogo"
-            target="_blank" class="boton-whatsapp">Añadir propiedad</a>
+<body class="bg-gray-800 text-gray-100">
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-gray-900 shadow-lg">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <span class="text-white text-xl font-bold">Inmuebles Industriales</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Enlace activo a la página de listado -->
+                            <a href="index.html" class="nav-link active" aria-current="page">Ver Inmuebles</a>
+                            <!-- Enlace a la página de creación -->
+                            <a href="create-inmueble.html" class="nav-link">Crear Nuevo Inmueble</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <nav class="navegador">
-            <ul class="navegadorLista">
-                <li><a href="index.html" style="color: #0090ff;">Inicio</a></li>
-                <li><a href="casas.html">Casas</a></li>
-                <li><a href="apartamentos.html">Apartamentos</a></li>
-                <li><a href="fincas.html">Fincas</a></li>
-                <li><a href="terrenos.html">Terrenos</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="menu">
-            <div class="menuCajas">
-                <a href="">Plantilla</a>
+    <!-- Contenido del Listado de Inmuebles -->
+    <div class="bg-gray-900 mt-8 py-16">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-300 mb-8 text-center">Nuestras Naves y Megainmuebles Industriales</h2>
+            
+            <!-- Contenedor donde se cargarán los inmuebles dinámicamente -->
+            <div id="inmuebles-container" class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                <!-- Los inmuebles se cargarán aquí desde la API usando JavaScript -->
+                <p class="col-span-full text-center text-gray-400" id="loading-message">Cargando inmuebles...</p>
             </div>
+        </div>
+    </div>
 
-            <div class="menuCajas">
-                <a href="">Plantilla</a>
-            </div>
-        </section>
-
-
-    </main>
+    <!-- Enlaza el archivo JavaScript para obtener y mostrar los inmuebles -->
+    <script src="fetch-inmuebles.js"></script>
 
 </body>
-
 </html>
